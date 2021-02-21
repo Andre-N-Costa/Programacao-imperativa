@@ -8,7 +8,7 @@ main () {
 
 
 
-  ||vertical||
+  /*vertical*/
 
 int main() {
     int x,y,z,w;
@@ -26,7 +26,7 @@ int main() {
 }
 
 
-  ||horizontal||
+  /*horizontal*/
 
 int main() {
     int x,y,z,w,a,b;
