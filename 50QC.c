@@ -63,3 +63,20 @@ int main() {
     printf("%d",x);
 }
 
+//5.
+
+int trailingZ(unsigned int n) {
+    int x = 0;
+    while ((n%2) == 0){
+        x++;
+        n = n/2;
+    }
+    return x;
+}
+
+int main(){
+    int x;
+    scanf("%d",&x);
+    printf("%d",trailingZ(x));
+    return 0;
+}
