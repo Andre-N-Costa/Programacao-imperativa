@@ -80,3 +80,21 @@ int main(){
     printf("%d",trailingZ(x));
     return 0;
 }
+
+//6
+
+int qDig (unsigned int n){
+    int i=1;
+    while ((n/10) > 0){
+        n = (n/10);
+        i++;
+    }
+    return i;
+}
+
+int main(){
+    int x;
+    scanf("%d",&x);
+    printf("%d",qDig(x));
+    return 0;
+}
