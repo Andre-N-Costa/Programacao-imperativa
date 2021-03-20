@@ -56,12 +56,6 @@ int bitsUm (unsigned int x){
     }
     return r;
 }
-int main() {
-    int x;
-    scanf("%d", &x);
-    x = bitsUm(x);
-    printf("%d",x);
-}
 
 //5.
 
@@ -74,12 +68,6 @@ int trailingZ(unsigned int n) {
     return x;
 }
 
-int main(){
-    int x;
-    scanf("%d",&x);
-    printf("%d",trailingZ(x));
-    return 0;
-}
 
 //6
 
@@ -92,9 +80,31 @@ int qDig (unsigned int n){
     return i;
 }
 
-int main(){
-    int x;
-    scanf("%d",&x);
-    printf("%d",qDig(x));
-    return 0;
+//8
+
+char *mystrcpy(char s1[], const char s2[]) {
+    int i = 0;
+
+    while (s2[i] != '\0'){
+        s1[i] = s2[i];
+        i++;
+
+    }
+    s1[i] = 0;
+
+    return s1;
+}
+
+//9
+
+int mystrcmp (char s1[], char s2[]){
+    int c = 0;
+    
+    for (int i = 0; ((c != -1) && (c != 1) && s1[i] != '\0'); i++){
+        if (s1[i] < s2[i]) (c = -1);
+        else if (s1[i] > s2[i]) (c = 1);
+        else c = c;
+    }
+    
+    return c;
 }
