@@ -168,3 +168,30 @@ void strnoV (char s[]){
     tmp[j] = '\0';
     strcpy(s,tmp);
 }
+
+//13
+
+void truncW (char t[], int n) {
+    char temp[100] = {'\0'};
+    char final[100] = {'\0'};
+    int memory = n;
+    int contador = 0;
+    for(int i = 0; t[i] != '\0'; i++){
+        if ((n != 0) && (t[i] != ' ')) {
+            n--;
+            temp[contador] = t[i];
+            contador++;
+        }
+        else {
+            while ((t[i] != ' ') && (t[i] != '\0')) i++;
+            strcat(temp, " ");
+            strcat(final, temp);
+            n = memory;
+            contador = 0;
+            for (int j = 0;temp[j] != '\0'; j++){
+                temp[j] = '\0';
+            }
+        }
+    }
+    strcpy(t,final);
+}
